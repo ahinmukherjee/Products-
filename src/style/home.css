@@ -1,0 +1,12 @@
+*{
+   margin: 0;
+   padding: 0; 
+}
+
+.home{
+    height: 800px;
+    width: 100vh;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+}
