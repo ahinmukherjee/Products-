@@ -33,8 +33,20 @@ const Products = () => {
                         <p>Price : ${p.price}</p>
                         <p>Ratting : {p.rating}</p>
                         <p>Category : {p.category}</p>                      
-                        {/* <p>Reviews: {p.reviews}</p>
-                        <p>Discount offer : {p.discountPercentage}</p> */}
+                        <p>Discount offer : {p.discountPercentage}</p>
+                        <p>Reviews:
+                        { p.reviews && p.reviews.length >0 ? (
+                            <ol> 
+                                {p.reviews.map((review, index)=>(
+                                    <li key={index}>
+                                        <strong>{review.reviwerName}</strong>{review.comment}
+                                    </li>
+                                ))}
+                            </ol>
+                        ): ( 
+                            <p>No reviews available</p>
+                        )}
+                        </p>
 
 
                     <br />
