@@ -1,0 +1,35 @@
+.navber {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blue;
+    backdrop-filter: blur(15px);
+    padding: 5px 30px;
+    height: 56px;
+    color: white;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    font-size: 1.5rem;
+}
+
+.menuContainer {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menuActive {
+    border-bottom: 3.5px solid white;
+}
+
+.links{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-size: 15px;
+    font-weight: 600;
+    padding-inline: 5px;
+}
