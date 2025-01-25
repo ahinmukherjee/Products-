@@ -9,7 +9,7 @@ const Home = () => {
     const fetchProducts = async () => {
         try {
             let { data } = await axios.get('https://dummyjson.com/products')
-            setProducts(data.products.slice(0,5))
+            setProducts(data.products.slice(0,6))
         } catch (error) {
             console.log(error);
 
@@ -27,15 +27,17 @@ const Home = () => {
 
             {
                 products.map((p) => {
-                    return <div key={p.id}>
-                        <p>Title : {p.title}</p>
-                        <img src={p.thumbnail} alt="" />
-                        <p>Description : {p.description}</p>
-                        <p>Price : ${p.price}</p>
-                        <p>Category : {p.category}</p>
+                    return <div class="key" key={p.id}>
+                        <div className="box">
+                        <p class="title">Title : {p.title}</p>
+                        <img class="image" src={p.thumbnail} alt="" />
+                        <p class="desc"><p class="product">Description :</p> {p.description}</p>
+                        <p class="price"><p class="product">Price :</p> ${p.price}</p>
+                        <p class="category"><p class="product">Category :</p> {p.category}</p>
                         <br />
 
-                        <Link to="./products">View more....</Link>
+                        <Link to="./products" class="link">View more....</Link>
+                        </div>
                     </div>
                 }
                 )}
