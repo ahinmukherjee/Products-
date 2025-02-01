@@ -31,11 +31,10 @@ const Home = () => {
                         <div className="box">
                         <p class="title">Title : {p.title}</p>
                         <img class="image" src={p.thumbnail} alt="" />
-                        <p class="desc"><p class="product">Description :</p> {p.description}</p>
-                        <p class="price"><p class="product">Price :</p> ${p.price}</p>
-                        <p class="category"><p class="product">Category :</p> {p.category}</p>
-                        <br />
-
+                        <p class="desc product">Description : {p.description}</p>
+                        <p class="price product">Price :${p.price}</p>
+                        <p class="category product">Category :{p.category}</p>
+    
                         <Link to="./products" class="link">View more....</Link>
                         </div>
                     </div>
