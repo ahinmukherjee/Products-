@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import "../style/home.css";
 
 const Home = () => {
@@ -22,25 +21,39 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
-            <br />
+        // <div>
+        //     <br />
 
-            {
-                products.map((p) => {
-                    return <div class="key" key={p.id}>
-                        <div className="box">
-                        <p class="title">Title : {p.title}</p>
-                        <img class="image" src={p.thumbnail} alt="" />
-                        <p class="desc product">Description : {p.description}</p>
-                        <p class="price product">Price :${p.price}</p>
-                        <p class="category product">Category :{p.category}</p>
+        //     {
+        //         products.map((p) => {
+        //             return <div class="key" key={p.id}>
+        //                 <div className="box">
+        //                 <p class="title">Title : {p.title}</p>
+        //                 <img class="image" src={p.thumbnail} alt="" />
+        //                 <p class="desc product">Description : {p.description}</p>
+        //                 <p class="price product">Price :${p.price}</p>
+        //                 <p class="category product">Category :{p.category}</p>
     
-                        <Link to="./products" class="link">View more....</Link>
-                        </div>
-                    </div>
-                }
-                )}
+        //                 <Link to="./products" class="link">View more....</Link>
+        //                 </div>
+        //             </div>
+        //         }
+        //         )}
+        // </div>
+
+    <div className="container">
+      {products.map((p) => (
+        <div className="products" key={p.id}>
+          {/* <div className="box"> */}
+            <p className="titles">Title: {p.title}</p>
+            <img className="image" src={p.thumbnail} alt={p.title} />
+            <p className="desc product">Description: {p.description}</p>
+            <p className="price product">Price: ${p.price}</p>
+            <p className="category product">Category: {p.category}</p>
+          {/* </div> */}
         </div>
+      ))}
+    </div>
     )
 }
 
