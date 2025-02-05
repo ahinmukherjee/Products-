@@ -21,6 +21,13 @@ const Header = () => {
                         >
                             Products
                         </Link>
+
+                        <Link class="links"
+                            to="/cards"
+                            className={activeLocation === "/cards" ? "menuActive" : ""}
+                        >
+                            Cards
+                        </Link>
         </div>
     </header>
   )

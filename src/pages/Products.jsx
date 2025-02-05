@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import "../style/product.css";
 import { Link } from 'react-router-dom';
 const Products = () => {
     const [products, setProducts] = useState([])
+    const[cards, setcards]= useState([])
 
     const fetchProducts = async () => {
         try {
@@ -21,6 +22,26 @@ const Products = () => {
         fetchProducts()
     }, [])
 
+    // function Mycomponent(){
+    const Call = async () =>{
+        try {
+            let { id } = await axios.get('https://dummyjson.com/products')
+            setcards(id.products)
+        } catch (error) {
+            console.log(error);
+
+        }
+    
+    }
+    console.log(cards);
+    
+
+    useEffect(()=>{
+        Call()
+    }, [])
+
+
+    // }
     return (
         // <div>
         //     <br />
@@ -81,7 +102,7 @@ const Products = () => {
                     <p>No reviews available</p>
                     )}
                 </div>
-                <Link to={`/products/${p.id}`} className="link">
+                <Link to="/cards" className="link" onClick={Call}>
                         View more...
                 </Link>
             </div>
