@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+// import React, { useCallback } from 'react'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import "../style/product.css";
@@ -23,22 +23,23 @@ const Products = () => {
     }, [])
 
     // function Mycomponent(){
-    const Call = async () =>{
-        try {
-            let { id } = await axios.get('https://dummyjson.com/products')
-            setcards(id.products)
-        } catch (error) {
-            console.log(error);
 
-        }
+    // const Call = async () =>{
+    //     try {
+    //         let { id } = await axios.get('https://dummyjson.com/products')
+    //         setcards(id.products)
+    //     } catch (error) {
+    //         console.log(error);
+
+    //     }
     
-    }
-    console.log(cards);
+    // }
+    // console.log(cards);
     
 
-    useEffect(()=>{
-        Call()
-    }, [])
+    // useEffect(()=>{
+    //     Call()
+    // }, [])
 
 
     // }
@@ -102,7 +103,7 @@ const Products = () => {
                     <p>No reviews available</p>
                     )}
                 </div>
-                <Link to="/cards" className="link" onClick={Call}>
+                <Link to={`/cards/${p.id}`}className="link">
                         View more...
                 </Link>
             </div>
