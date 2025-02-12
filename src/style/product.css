@@ -66,4 +66,85 @@ strong {
 .link:hover {
     color: #0056b3;
 }
+
+@media (min-width: 1025px) {
+    .product-container {
+        justify-content: flex-start;
+        padding: 30px;
+    }
+    .product-card {
+        width: 320px;
+    }
+}
+
+/* Tablets (Portrait & Landscape) */
+@media (max-width: 1024px) {
+    .product-container {
+        justify-content: center;
+        padding: 20px;
+    }
+    .product-card {
+        width: 280px;
+    }
+    .product-image {
+        height: 220px;
+    }
+    .title {
+        font-size: 1.3rem;
+    }
+    p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    .product-card {
+        width: 90%;
+        max-width: 320px;
+    }
+    .product-image {
+        height: 200px;
+    }
+    .title {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    .link {
+        font-size: 1rem;
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+    .product-container {
+        padding: 10px;
+    }
+    .product-card {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+    }
+    .product-image {
+        height: 180px;
+    }
+    .title {
+        font-size: 1.1rem;
+    }
+    p {
+        font-size: 0.85rem;
+    }
+    .link {
+        font-size: 0.95rem;
+    }
+}
+
+
   

@@ -107,3 +107,76 @@
 .tag_product{
     border: 2px solid red;
 } */
+
+@media (min-width: 1025px) {
+    .container {
+        justify-content: flex-start;
+        padding: 30px;
+    }
+    .products {
+        width: 320px;
+    }
+}
+
+/* Tablets (Portrait & Landscape) */
+@media (max-width: 1024px) {
+    .container {
+        justify-content: center;
+        padding: 20px;
+    }
+    .products {
+        width: 280px;
+    }
+    .image {
+        height: 220px;
+    }
+    .titles {
+        font-size: 1.3rem;
+    }
+    .product, .desc, .price, .category {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    .products {
+        width: 90%;
+        max-width: 320px;
+    }
+    .image {
+        height: 200px;
+    }
+    .titles {
+        font-size: 1.2rem;
+    }
+    .product, .desc, .price, .category {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    .products {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+    }
+    .image {
+        height: 180px;
+    }
+    .titles {
+        font-size: 1.1rem;
+    }
+    .product, .desc, .price, .category {
+        font-size: 0.85rem;
+    }
+}
