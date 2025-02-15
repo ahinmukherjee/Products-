@@ -118,7 +118,7 @@
     }
 }
 
-/* Tablets (Portrait & Landscape) */
+
 @media (max-width: 1024px) {
     .container {
         justify-content: center;
@@ -138,7 +138,7 @@
     }
 }
 
-/* Mobile Phones */
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -160,7 +160,6 @@
     }
 }
 
-/* Small Mobile Screens */
 @media (max-width: 480px) {
     .container {
         padding: 10px;
